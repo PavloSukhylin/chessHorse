@@ -1,9 +1,9 @@
 public class ChessHorse {
     public static void main(String[] args) {
-        String row_location_horse = "e";
-        int string_location_horse = 5;
-        String row_checking_position = "c";
-        int stringe_checking_position = 4;
+        String row_location_horse = "h";
+        int string_location_horse = 8;
+        String row_checking_position = "a";
+        int stringe_checking_position = 1;
         int i = 0,j,k = 0,l;
 
         switch (row_location_horse){
@@ -26,13 +26,13 @@ public class ChessHorse {
             case "g" : k = 7; break;
             case "h" : k = 8; break;
         }
-        //if (((Math.abs(k-i) == 1)|(Math.abs(k-i) == 2))&&((Math.abs(string_location_horse - stringe_checking_position) == 1)|(Math.abs(string_location_horse - stringe_checking_position)))){
           if((Math.abs(k-i) == 1)&&(Math.abs(string_location_horse - stringe_checking_position) == 2)){
-            System.out.println("Конь может ходить следующим ходом на " + row_checking_position + stringe_checking_position);
-          }
+              System.out.println("Конь на " + row_location_horse + string_location_horse + " может стать следующим ходом на " + row_checking_position + stringe_checking_position);
+          } else
         if((Math.abs(k-i) == 2)&&(Math.abs(string_location_horse - stringe_checking_position) == 1)){
-            System.out.println("Конь может ходить следующим ходом на " + row_checking_position + stringe_checking_position);
-
+            System.out.println("Конь на " + row_location_horse + string_location_horse + " может стать следующим ходом на " + row_checking_position + stringe_checking_position);
+        }else {
+            System.out.println("Конь на " + row_location_horse + string_location_horse + " не может стать следующим ходом на " + row_checking_position + stringe_checking_position);
         }
     }
 }
